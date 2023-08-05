@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Shopping List",
+        "category": "Task",
+        "content": "Buy bananas, tomatoes, and bread. 01.08.2023"
+    },
+    {
+        "name": "To-Do List",
+        "category": "Idea",
+        "content": "Finish the report for work. 03.08.2023"
+    },
+    {
+        "name": "Recipe",
+        "category": "Random Thought",
+        "content": "Ingredients: chicken, potatoes, carrots, and onions."
+    },
+    {
+        "name": "Gym Plan",
+        "category": "Quote",
+        "content": "Workout routine: 30 minutes of cardio, 3 sets of squats, 3 sets of bench press."
+    },
+    {
+        "name": "Travel Itinerary",
+        "category": "Task",
+        "content": "Flight details: 07.09.2023, Departure at 9:00 AM, Arrival at 2:00 PM."
+    },
+    {
+        "name": "Book Recommendations",
+        "category": "Idea",
+        "content": "Books to read: \"The Great Gatsby,\" \"1984,\" \"To Kill a Mockingbird.\""
+    },
+    {
+        "name": "Gift Ideas",
+        "category": "Random Thought",
+        "content": "Gifts to buy: watch, perfume, and a handwritten letter."
+    }
+]
