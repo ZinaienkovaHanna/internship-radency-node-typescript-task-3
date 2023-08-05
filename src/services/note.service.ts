@@ -7,6 +7,7 @@ import {
     deleteNoteRepo,
     getNotesStatsRepo,
 } from '../repositories/note.repository';
+import { validateNoteSchema } from '../models/validate.model';
 import { NoteType } from '../types/note.types';
 
 function handleError(res: Response, error: any): void {
@@ -38,7 +39,10 @@ export async function getNote(req: Request, res: Response): Promise<void> {
 
 export async function addNote(req: Request, res: Response): Promise<void> {
     try {
-        const newNoteData = req.body;
+        const newNoteData: NoteType = req.body;
+
+        await validateNoteSchema.validate(newNoteData, { abortEarly: false });
+
         const newNote = await addNoteRepo(newNoteData);
         res.status(201).json(newNote);
     } catch (err) {
@@ -50,6 +54,11 @@ export async function updateNote(req: Request, res: Response): Promise<void> {
     try {
         const id = req.params.id;
         const updatedNoteData: NoteType = req.body;
+
+        await validateNoteSchema.validate(updatedNoteData, {
+            abortEarly: false,
+        });
+
         const updatedNote = await updateNoteRepo(id, updatedNoteData);
         if (!updatedNote) {
             res.status(404).json({ message: 'Note not found' });
